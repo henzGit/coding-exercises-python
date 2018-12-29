@@ -29,7 +29,6 @@ def maxDepth(node):
         else:
             return rDepth + 1
 
-
 """
 Main function
 """
@@ -40,9 +39,7 @@ def main():
     root.right = Node(3)
     root.left.left = Node(4)
     root.right.right = Node(5)
-
     print("Height of tree is %d" % (maxDepth(root)))
-
 
 if __name__ == "__main__":
     main()

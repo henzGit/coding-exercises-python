@@ -6,3 +6,6 @@
 2. Given an integer, return all sequences of numbers that sum to it. (Example: 3 => (1, 2), (2, 1), (1, 1, 1)).
    <br>
    Solution: https://github.com/henzGit/codingInterviewPreparations/blob/master/q2.py
+3. Find depth of binary tree
+   <br>
+   Solution: https://github.com/henzGit/codingInterviewPreparations/blob/master/q3.py

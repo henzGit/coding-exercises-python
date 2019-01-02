@@ -12,3 +12,6 @@
 4. Given a 8x8 chess board what is the cumulative probability that next move will fall in the chess board
    <br>
    Solution: https://github.com/henzGit/codingInterviewPreparations/blob/master/q4.py
+5. Reverse a linked list
+   <br>
+   Solution: https://github.com/henzGit/codingInterviewPreparations/blob/master/q5.py

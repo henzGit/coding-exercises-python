@@ -18,13 +18,12 @@ def __findMaxSumNode(node):
     leftSum = __findMaxSumNode(node.left)
     rightSum = __findMaxSumNode(node.right)
 
-    maxSum = max(
-        node.data,
-        node.data + leftSum,
-        node.data + rightSum
-    )
+    maxSingle = max(node.data, node.data + max(leftSum, rightSum))
 
-    return maxSum
+    maxTop = max(maxSingle, node.data + leftSum + rightSum)
+
+    findMaxSum.res = max(findMaxSum.res, maxTop)
+    return maxSingle
 
 """
 Find maximum path sum in a binary tree
@@ -32,32 +31,39 @@ Find maximum path sum in a binary tree
 @:return maxSum int Integer containing sum of all of nodes data
 """
 def findMaxSum(rootNode):
-    leftSum = __findMaxSumNode(rootNode.left)
-    print("leftSum: %s" %leftSum)
-    rightSum = __findMaxSumNode(rootNode.right)
-    print("rightSum: %s" %rightSum)
-
-    maxSum = max(
-        rootNode.data,
-        rootNode.data + leftSum,
-        rootNode.data + rightSum,
-        rootNode.data + leftSum + rightSum
-    )
-
-    return maxSum
+    findMaxSum.res = float("-inf")
+    __findMaxSumNode(rootNode)
+    return findMaxSum.res
 
 """
 Main function
 """
 def main():
-    root = Node(10)
-    root.left = Node(2)
-    root.right = Node(10)
-    root.left.left = Node(20)
+
+    # First tree
+    # root = Node(10)
+    # root.left = Node(2)
+    # root.right = Node(10)
+    # root.left.left = Node(20)
+    # root.left.right = Node(1)
+    # root.right.right = Node(-25)
+    # root.right.right.left = Node(3)
+    # root.right.right.right = Node(4)
+
+    # Second tree
+    root = Node(-15)
+    root.left = Node(5)
+    root.right = Node(6)
+    root.left.left = Node(-8)
     root.left.right = Node(1)
-    root.right.right = Node(25)
-    root.right.right.left = Node(3)
-    root.right.right.right = Node(4)
+    root.left.left.left = Node(2)
+    root.left.left.right = Node(6)
+    root.right.left = Node(3)
+    root.right.right = Node(9)
+    root.right.right.right = Node(0)
+    root.right.right.right.left = Node(4)
+    root.right.right.right.right = Node(-1)
+    root.right.right.right.right.left = Node(10)
     maxSum = findMaxSum(root)
     print("maxSum: %s" % maxSum)
 

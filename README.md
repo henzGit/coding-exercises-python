@@ -15,3 +15,6 @@
 5. Reverse a linked list
    <br>
    Solution: https://github.com/henzGit/codingInterviewPreparations/blob/master/q5.py
+6. Find maximum path sum in a binary tree
+   <br>
+   Solution: https://github.com/henzGit/codingInterviewPreparations/blob/master/q6.py

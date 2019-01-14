@@ -18,3 +18,6 @@
 6. Find maximum path sum in a binary tree
    <br>
    Solution: https://github.com/henzGit/codingInterviewPreparations/blob/master/q6.py
+6. Find minimum dice throw in snake and ladder game
+   <br>
+   Solution: https://github.com/henzGit/codingInterviewPreparations/blob/master/q7.py

@@ -14,13 +14,13 @@ def main():
     # Read first line
     nbrQueries = int(F.readline())
     while nbrQueries > 0:
-        query = F.readline()
+        query = F.readline().replace("\n", "")
         # print front of queue
-        if query == "3\n" or query == "3":
+        if query == "3":
             if len(queue) > 0:
                 print(queue[0])
         # deque 1 element from queue
-        elif query == "2\n" or query == "2":
+        elif query == "2":
             if len(queue) > 0:
                 queue.pop(0)
         # enqueue 1 element
